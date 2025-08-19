@@ -154,7 +154,7 @@ body {
   position: absolute;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.94); 
-  z-index: 1;
+  z-index: 0;
 }
 
 .about-container {
@@ -238,7 +238,7 @@ body {
   position: absolute;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.94); 
-  z-index: 1;
+  z-index: 0;
 }
 
 .products h2 {
@@ -303,13 +303,13 @@ body {
 .services-section .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(255,255,255,0.7); /* white overlay to reduce brightness */
-  z-index: 1;
+  background-color: rgba(255,255,255,0.7); 
+  z-index: 0;
 }
 
 .services-section .content {
   position: relative;
-  z-index: 2; /* above overlay */
+  z-index: 3; 
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -321,12 +321,14 @@ body {
 .services-section .heading h2 {
   font-size: 36px;
   margin-bottom: 10px;
+  z-index: 4; 
 }
 
 .services-section .heading h3 {
   font-size: 24px;
   font-weight: 400;
-  color: #555;
+  color: #101010;
+  z-index: 4;
 }
 
 .services-section .cards-grid {
@@ -373,10 +375,12 @@ body {
 
 /*  BRANDS  */
 .brands-section {
-  background-color: #1f2a44; /* dark blue background */
+  background-color: #1f2a44; 
   padding: 60px 20px;
   text-align: center;
   color: #fff;
+  position: relative;
+  z-index: 1; 
 }
 
 .brands-section h2 {
@@ -401,6 +405,7 @@ body {
   justify-content: center;
   min-width: 160px;
   min-height: 80px;
+  z-index: 2; 
 }
 
 .brand-card img {
@@ -415,11 +420,19 @@ body {
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
+  z-index: 3;
+}
+.gallery-section .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255,255,255,0.9);
+  z-index: -1;
 }
 
 .gallery-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
+  z-index: 4;
 }
 
 .gallery-wrapper {
@@ -461,13 +474,14 @@ body {
   padding: 80px 20px;
   background: url('../images/bgabout.png') center/cover no-repeat;
   color: #333;
+  z-index: 1;
 }
 
 .contact-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(255,255,255,0.8);
-  z-index: 1;
+  z-index: -1;
 }
 
 .contact-content {
@@ -531,12 +545,19 @@ body {
   background: #444;
 }
 
-/* ------------------ FOOTER ------------------ */
+/*  FOOTER  */
 .footer {
-  background: #2d3655; /* dark blue */
+  background: #2d3655; 
   color: #fff;
   font-size: 14px;
   padding: 50px 20px 20px;
+  
+}
+.footer .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255,255,255,0.1); 
+  z-index: -1;
 }
 
 .footer-top {
@@ -570,7 +591,6 @@ body {
 /* Social icons */
 .footer-socials a {
   display: inline-block;
-  background: #fff;
   color: #2d3655;
   width: 32px;
   height: 32px;
@@ -638,7 +658,7 @@ body {
   max-width: 1200px;
   margin: 20px auto 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;\
   font-size: 13px;
   color: #bbb;
 }
